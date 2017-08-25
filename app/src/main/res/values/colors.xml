@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#303F9F</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#303F9F</color>
+
+    <!-- 深色字体颜色 -->
+    <color name="text_color_deep">#333333</color>
+    <color name="text_color_deep2">#747474</color>
+    <!-- 深色字体颜色 -->
+    <color name="text_color_deep_middle">#666666</color>
+    <!-- 浅色字体颜色 -->
+    <color name="text_color_light">#999999</color>
+    <color name="text_color_light2">#acacac</color>
+
+</resources>

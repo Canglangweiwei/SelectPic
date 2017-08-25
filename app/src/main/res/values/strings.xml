@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestSelectPics</string>
+    <string name="cancel_txt">取消</string>
+    <string name="gallery_txt">相册</string>
+    <string name="camera_txt">拍照</string>
+    <string name="save_txt">保存</string>
+</resources>
