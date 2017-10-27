@@ -34,7 +34,7 @@ import java.io.File;
 import butterknife.Bind;
 import butterknife.OnClick;
 
-@SuppressWarnings("ALL")
+//@SuppressWarnings("ALL")
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private static final int REQUEST_TAKE_PHOTO_PERMISSION = 222;
