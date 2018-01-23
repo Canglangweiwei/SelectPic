@@ -78,9 +78,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         }
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    private String localImg;
-
     /**
      * 打开对话框
      */
@@ -126,8 +123,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     /**
      * 裁剪图片方法实现
-     *
-     * @param uri
      */
     private void startPhotoZoom(Uri uri) {
         Intent intent = new Intent(MainActivity.this, PreviewActivity.class);
@@ -137,14 +132,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     /**
      * 保存裁剪之后的图片数据
-     *
-     * @param picdata
      */
     private void setPicToView(Intent picdata) {
-        Bitmap bitmap = null;
+        Bitmap bitmap;
         byte[] bis = picdata.getByteArrayExtra("bitmap");
         bitmap = BitmapFactory.decodeByteArray(bis, 0, bis.length);
-        localImg = System.currentTimeMillis() + ".JPEG";
+        String localImg = System.currentTimeMillis() + ".JPEG";
         if (bitmap != null) {
             SDPathUtils.saveBitmap(bitmap, localImg);
             Log.e("本地图片绑定", SDPathUtils.getCachePath() + localImg);
@@ -156,10 +149,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     /**
      * 加载图片
-     *
-     * @param imageView
-     * @param imageUrl
-     * @param emptyImgId
      */
     private void setImageUrl(ImageView imageView, String imageUrl, int emptyImgId) {
         if (options == null) {
@@ -170,7 +159,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     .cacheInMemory(true)
                     .cacheOnDisk(true)
                     .considerExifParams(true)
-                    .bitmapConfig(Bitmap.Config.RGB_565).build();
+                    .bitmapConfig(Bitmap.Config.RGB_565)
+                    .build();
         }
         Log.d("图片地址：", imageUrl);
         ImageLoader.getInstance().displayImage(imageUrl, imageView, options);

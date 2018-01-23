@@ -12,10 +12,9 @@
 
     <com.dev.testselectpics.view.CircleImageView
         android:id="@+id/iv_head"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:src="@mipmap/head_logo" />
-
 </RelativeLayout>

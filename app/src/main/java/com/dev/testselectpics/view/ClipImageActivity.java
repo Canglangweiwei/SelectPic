@@ -21,7 +21,6 @@ import com.dev.testselectpics.utils.ImageCompressUtils;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-
 @SuppressWarnings("ALL")
 public class ClipImageActivity extends Activity {
 
@@ -117,7 +116,6 @@ public class ClipImageActivity extends Activity {
     /**
      * 初始化图片资源
      */
-    @SuppressWarnings("deprecation")
     private void initBitmap() {
         try {
             ImageCompressUtils compress = new ImageCompressUtils();
